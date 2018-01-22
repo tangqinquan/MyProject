@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app1">
+    <!--vue判断-->
+			<span v-if="ok">
+				{{message}}
+			</span>
+    <!--vue循环-->
+    <ul>
+        <li v-for="l in list">
+            my name is {{l.name}},I am {{l.age}} years old
+        </li>
+    </ul>
+</div>
+
+<div id="app2">
+    <!--vue判断-->
+			<span v-if="ok">
+				{{message}}
+			</span>
+    <!--vue循环-->
+    <ul>
+        <li v-for="l in methods:add">
+            my name is {{l.name}},I am {{l.age}} years old】
+        </li>
+    </ul>
+</div>
+<!--引入cdn库，引入js需要在最底部-->
+<script src="js/vue.min.js"></script>
+<script src="js/v1.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

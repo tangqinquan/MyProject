@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+<div  >
+    <div ng-app="hd" ng-controller="ctrl">
+
+    </div>
+</div>
+<script>
+    var m = angular.module("hd",[]);
+    m.controller('ctrl',['$scope',function ($scope){
+        var data=[{name:'鸭子',footer:'2'},{name:'鸡子',footer:'2'},{name:'兔子',footer:'4'}];
+    }]);
+</script>
+</body>
+</html>

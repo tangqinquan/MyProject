@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script language="javascript">
+
+/*    var dt = new Date();
+    var m=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec");
+    var w=new Array("Monday","Tuseday","Wednesday","Thursday","Friday","Saturday","Sunday");
+    var d=new Array("st","nd","rd","th");
+    mn=dt.getMonth();
+    wn=dt.getDay();
+    dn=dt.getDate();
+    var dns;
+    if(((dn%10)<1) ||((dn%10)>3)){
+        dns=d[3];
+    }
+    else
+    {
+        dns=d[(dn%10)-1];
+        if((dn==11)||(dn==12)){
+            dns=d[3];
+        }
+    }
+    //document.write(m[mn]+" "+dn+dns+" " +w[wn-1]+" "+dt.getFullYear());
+    document.write(m[mn]+" "+dn+dns+" "+dt.getFullYear());*/
+/*获取当天日期转换为英文日期。*/
+/*    function changeEglishDate(){
+        var dt = new Date();
+        console.log(dt);
+        var m=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec");
+        var w=new Array("Monday","Tuseday","Wednesday","Thursday","Friday","Saturday","Sunday");
+        var d=new Array("st","nd","rd","th");
+        mn=dt.getMonth();
+        wn=dt.getDay();
+        dn=dt.getDate();
+        var dns;
+        if(((dn%10)<1) ||((dn%10)>3)){
+            dns=d[3];
+        }
+        else
+        {
+            dns=d[(dn%10)-1];
+            if((dn==11)||(dn==12)){
+                dns=d[3];
+            }
+        }
+        var Englishdate=m[mn]+" "+dn+dns+" "+dt.getFullYear();
+        return Englishdate;
+        //document.write(m[mn]+" "+dn+dns+" " +w[wn-1]+" "+dt.getFullYear());
+        //document.write(m[mn]+" "+dn+dns+" "+dt.getFullYear());
+    };
+  document.write(changeEglishDate());*/
+/*获取当天日期转换为英文日期end*/
+
+
+/*根据传入日期转换为英文日期。*/
+function changeEglishDate(datestring){
+    var dt = new Date(datestring);
+    console.log(dt);
+    var m=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec");
+    var w=new Array("Monday","Tuseday","Wednesday","Thursday","Friday","Saturday","Sunday");
+    var d=new Array("st","nd","rd","th");
+    mn=dt.getMonth();
+    wn=dt.getDay();
+    dn=dt.getDate();
+    var dns;
+    if(((dn%10)<1) ||((dn%10)>3)){
+        dns=d[3];
+    }
+    else
+    {
+        dns=d[(dn%10)-1];
+        if((dn==11)||(dn==12)){
+            dns=d[3];
+        }
+    }
+   // var Englishdate=m[mn]+" "+dn+dns+" "+dt.getFullYear();
+    var Englishdate=m[mn]+" "+dn+","+dt.getFullYear();
+    return Englishdate;
+}
+var abc = changeEglishDate('2018/01/21');
+document.write(abc);
+/*根据传入日期转换为英文日期。*/
+</script>
+<h1><script>document.write(changeEglishDate('2018-01-21'));</script></h1>
+</body>
+</html>

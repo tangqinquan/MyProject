@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+<div  >
+    <div ng-app="hd" ng-controller="ctrl">
+        选择城市：<select ng-model="selectedItem" ng-options="v.value as v.name group by v.style for v in json1">
+                    <option value="">请选择</option>
+                </select>
+        {{json1.name}}
+    </div>
+</div>
+<script>
+    var m = angular.module("hd",[]);
+    m.controller('ctrl',['$scope',function ($scope){
+        $scope.json1 = [
+            {name:'北京',value:'beijing',style:'直辖市'},
+            {name:'广州',value:'guangzhou',style:'地级市'},
+            {name:'深圳',value:'shenzhen',style:'地级市'},
+            {name:'南京',value:'nanjing',style:'地级市'},
+            {name:'天津',value:'tianjin',style:'直辖市'},
+        ];
+    }]);
+</script>
+</body>
+</html>
